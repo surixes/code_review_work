@@ -43,4 +43,5 @@ public class CalculatorTest {
         // (5 * 3) + (10 - 4) / 2 = 15 + 3 = 18
         assertEquals(18, calculator.solver());
     }
+
 }
