@@ -1,6 +1,5 @@
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class CalculatorTest {
 
@@ -34,10 +33,15 @@ public class CalculatorTest {
         assertEquals(-4, calculator.div(12, -3));
     }
 
+    @Test(expected = ArithmeticException.class)
+    public void testDivByZero() {
+        calculator.div(10, 0);
+    }
+
     @Test
     public void solver() {
-        // Проверяем: 2*(3)^2 + 3*3 - 5 = 2*9 + 9 - 5 = 18 + 9 - 5 = 22
-        assertEquals(22, calculator.solver2());
+        // (5 * 3) + (10 - 4) / 2 = 15 + 3 = 18
+        assertEquals(18, calculator.solver());
     }
 
 }
