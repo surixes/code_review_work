@@ -23,6 +23,4 @@ jobs:
           distribution: temurin
           
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@v4
-        with:
-          arguments: build
+        run: ./gradlew build
